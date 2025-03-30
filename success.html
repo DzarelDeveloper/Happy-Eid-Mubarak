@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terima Kasih!</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+        @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@1,500&display=swap');
+
+        body {
+            font-family: 'Newsreader', serif;
+            background: linear-gradient(135deg, #fdfaee 0%, #e0e1dc 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+        }
+
+        h1 {
+            font-family: 'Amatic SC', cursive;
+            font-size: 2.5em;
+            color: #3a2a7e;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #18093b;
+            margin: 10px 0;
+        }
+
+        .qr-code {
+            max-width: 250px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .payment-number {
+            font-size: 1.2em;
+            color: #f37915;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        a.btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #f37915, #e67e22);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: 'Newsreader', serif;
+            font-size: 1.1em;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        a.btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .qr-code {
+                max-width: 200px;
+            }
+            .payment-number, a.btn {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ihhh beneran dong</h1>
+        <p id="paymentDesc"></p>
+        <img id="paymentQr" src="" alt="QR Code" class="qr-code">
+        <p id="paymentNumber" class="payment-number"></p>
+        <a href="index.html" class="btn">Kembali</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
